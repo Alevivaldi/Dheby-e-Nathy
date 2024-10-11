@@ -40,7 +40,6 @@
                 password: document.getElementById('senha').value,
             };
 
-            // Envia os dados para o servidor
             fetch('http://localhost:8080/cliente/cadastro', {
                 method: 'POST',
                 headers: {
@@ -70,12 +69,11 @@
 
 
 
-
     /*
     Nathy e debhy esse é o formato JSON
     {
         "nome": "Nome do Usuário",
-        "email": "email@exemplo.com",
+        "username": "email@exemplo.com",
         "telefone": "123456789",
         "endereco": {
             "cep": "12345678",
@@ -83,6 +81,6 @@
             "cidade": "Cidade Exemplo",
             "estado": "Estado"
         },
-        "senha": "senha_secreta"
+        "password": "senha_secreta"
     }
 */

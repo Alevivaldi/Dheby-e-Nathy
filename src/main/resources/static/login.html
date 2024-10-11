@@ -4,66 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cake Art</title>
+    <title>Cake Art - Login</title>
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMP2X0eEz2Jf2J0Y8vB2Y0T63b2yC2B2C58KvV" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo-with-photo">
-                <img src="img/logo.jpg" alt="Minha Foto">
-                <div class="logo">Cake Art</div>
-            </div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="login.html">Login</a></li>
-               
+<header>
+    <nav>
+        <div class="logo-with-photo">
+            <img src="img/logo.jpg" alt="Logo da Cake Art">
+            <div class="logo">Cake Art</div>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="login">
+    <h2>Login</h2>
+    <form id="login-form">
+        <label for="usuario">Usuário:</label>
+        <input type="text" id="usuario" name="usuario" required>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        <button class="button" type="submit">Entrar</button>
+    </form>
+    <div class="cadastro-link">
+        <p>Não tem uma conta? <a href="cadastro.html" class="botao-cadastro">Cadastre-se aqui</a></p>
+        <a href="adm.html" class="botao-cadastro">Acessar como administrador</a>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="endereco">
+            <h3>Endereço:</h3>
+            <p>Rua Fictícia, 123</p>
+            <p>Cidade Imaginária</p>
+            <p>CEP: 12345-678</p>
+        </div>
+        <div class="redes-sociais">
+            <h3>Siga-nos:</h3>
+            <ul>
+                <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=seu_numero" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
             </ul>
-        </nav>
-    </header>
-  
-    <section id="login">
-        <h2>Login</h2>
-        <form>
-            <label for="usuario">Usuário:</label>
-            <input type="text" id="usuario" name="usuario" required>
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required>
-            <button class="button" type="submit" formaction="painel.html">Entrar</button>
-        </form>
-        <!-- Botão de Cadastro na seção de Login -->
-        <div class="cadastro-link">
-            <p>Não tem uma conta? <a href="cadastro.html" class="botao-cadastro">Cadastre-se aqui</a></p>
-            <a href="adm.html" class="botao-cadastro">Acessar como administrador</a>
         </div>
-    </section>
-  
-    <footer>
-        <div class="footer-content">
-            <div class="endereco">
-                <h3>Endereço:</h3>
-                <p>Rua Fictícia, 123</p>
-                <p>Cidade Imaginária</p>
-                <p>CEP: 12345-678</p>
-            </div>
-            <div class="redes-sociais">
-                <h3>Siga-nos:</h3>
-                <ul>
-                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
-                    <li><a href="https://api.whatsapp.com/send?phone=seu_numero" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-                </ul>
-            </div>
-            <div class="mapa">
-                <h3>Como chegar:</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d29435.251813047416!2d-43.4536448!3d-22.7502917!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1720550442189!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+        <div class="mapa">
+            <h3>Como chegar:</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d29435.251813047416!2d-43.4536448!3d-22.7502917!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1720550442189!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <p class="direitos">&copy; 2024 Cake Art. Todos os direitos reservados.</p>
-    </footer>
+    </div>
+    <p class="direitos">&copy; 2024 Cake Art. Todos os direitos reservados.</p>
+</footer>
 <script src="js/login.js"></script>
 </body>
 </html>

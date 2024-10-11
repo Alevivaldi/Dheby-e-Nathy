@@ -7,8 +7,7 @@
             const usuario = document.getElementById('usuario').value;
             const senha = document.getElementById('senha').value;
 
-
-            fetch('http://localhost:8080/login', {
+            fetch('http://localhost:8080/cliente/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -26,9 +25,8 @@
                 }
             })
             .then(data => {
-
                 console.log('Login bem-sucedido:', data);
-
+                alert('Login realizado com sucesso!');
                 window.location.href = 'painel.html';
             })
             .catch(error => {
