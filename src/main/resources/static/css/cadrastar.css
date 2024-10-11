@@ -1,0 +1,304 @@
+/* Reset básico e estilos globais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tenor Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-image: url('/img/ç.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+    text-align: left;
+    height: auto; /* Ajuste para permitir o redimensionamento automático */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Mudança para coluna em telas menores */
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+}
+
+/* Ajusta o logo e foto */
+.logo-with-photo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo-with-photo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+header .logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem;
+    color: #f7eaee;
+}
+
+/* Ajusta a navegação para telas menores */
+header nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fdfdfd;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Estilos para a seção de cadastro */
+#cadastro {
+    max-width: 500px; /* Limita a largura máxima */
+    width: 90%;
+    margin: 20px auto; /* Centraliza o formulário e adiciona margem */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Ajusta o tamanho do título */
+#cadastro h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.75rem; /* Ajuste para tamanhos menores */
+    color: #e91e63;
+    margin-bottom: 20px;
+}
+
+/* Ajusta o estilo das labels */
+#cadastro form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Ajusta o estilo dos campos de entrada */
+#cadastro form input[type="text"],
+#cadastro form input[type="password"],
+#cadastro form input[type="email"],
+#cadastro form input[type="tel"] {
+    width: calc(100% - 20px); /* Ajuste com padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Estilos para o botão de cadastro */
+#cadastro .botao-cadastro {
+    width: calc(100% - 20px); /* Ajuste com padding */
+    padding: 10px;
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Efeito hover no botão */
+#cadastro .botao-cadastro:hover {
+    background-color: #c2185b;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos responsivos para dispositivos menores */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        height: auto;
+        text-align: center;
+    }
+
+    header .logo {
+        font-size: 1.75rem;
+    }
+
+    header nav {
+        margin-top: 15px;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    #cadastro {
+        padding: 15px;
+        width: 95%;
+        max-width: 100%;
+    }
+
+    #cadastro h2 {
+        font-size: 1.5rem;
+    }
+
+    #cadastro form input[type="text"],
+    #cadastro form input[type="password"],
+    #cadastro form input[type="email"],
+    #cadastro form input[type="tel"] {
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+
+    #cadastro .botao-cadastro {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos para iPhones e dispositivos similares */
+@media (max-width: 414px) {
+    header .logo-with-photo img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.85rem;
+    }
+
+    #cadastro {
+        padding: 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #cadastro h2 {
+        font-size: 1.25rem;
+    }
+
+    #cadastro form input[type="text"],
+    #cadastro form input[type="password"],
+    #cadastro form input[type="email"],
+    #cadastro form input[type="tel"] {
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    #cadastro .botao-cadastro {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Estilos para o rodapé */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.endereco, .redes-sociais, .mapa {
+    flex: 1 1 250px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.endereco h3, .redes-sociais h3, .mapa h3 {
+    color: #e91e63;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.endereco p {
+    margin-bottom: 10px;
+}
+
+.redes-sociais ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.redes-sociais ul li {
+    margin-bottom: 10px;
+}
+
+.redes-sociais a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    color: #2f00ff;
+}
+
+.mapa img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.direitos {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+#vlibras-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

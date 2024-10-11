@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Art - Finalizar Compra</title>
+    <link rel="stylesheet" href="/css/finalizarcompra.css">
+    <!-- Adicione links para bibliotecas de ícones se necessário -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-with-photo">
+                <img src="img/logo.jpg" alt="Logo Cake Art">
+                <div class="logo">Cake Art</div>
+            </div>
+            <ul class="menu">
+                <li><a href="/index.html" class="active">Home</a></li>
+                <li><a href="/produtos">Produtos</a></li>
+                <li><a href="/sobre.html" class="active">Sobre</a></li>
+                <li><a href="/contato.html">Contato</a></li>
+                <li><a href="/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="checkout-container">
+        <h1>Finalizar Compra</h1>
+        <form class="checkout-form">
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="pagamento">Forma de Pagamento:</label>
+                <select id="pagamento" name="pagamento" required>
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="boleto">Boleto Bancário</option>
+                    <option value="pix">PIX</option>
+                </select>
+            </div>
+            <a href="/pagamento.html" button type="submit"  class="checkout-button">Confirmar Pedido</a>
+        </form>
+        <div class="qr-code" id="qr-code" style="display: none;">
+            <h2>Pagamento via PIX:</h2>
+            <img src="img/qr-code-pix.png.jpeg" alt="QR Code PIX">
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="endereco">
+                <h3>Endereço:</h3>
+                <p>Rua Fictícia, 123</p>
+                <p>Cidade Imaginária</p>
+                <p>CEP: 12345-678</p>
+            </div>
+            <div class="redes-sociais">
+                <h3>Siga-nos:</h3>
+                <ul>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=seu_numero" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
+            </div>
+            <div class="mapa">
+                <h3>Como chegar:</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d29435.251813047416!2d-43.4536448!3d-22.7502917!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1720550442189!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa"></iframe>
+            </div>
+        </div>
+        <p class="direitos">&copy; 2024 Cake Art. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Script para exibir o QR Code quando a opção PIX for selecionada
+        document.getElementById('pagamento').addEventListener('change', function() {
+            const qrCode = document.getElementById('qr-code');
+            if (this.value === 'pix') {
+                qrCode.style.display = 'block';
+            } else {
+                qrCode.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

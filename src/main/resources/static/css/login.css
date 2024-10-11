@@ -1,0 +1,316 @@
+/* Estilos globais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o corpo ocupe a altura total da tela */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-image: url('/img/ç.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+    text-align: left;
+    height: 100vh; /* Altura total da tela */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    background-color: rgba(255, 255, 255, 0.5); /* Branco com 50% de opacidade */
+}
+
+/* Contêiner para logo e foto */
+.logo-with-photo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Espaçamento abaixo do logo */
+}
+
+.logo-with-photo img {
+    width: 80px; /* Tamanho da foto */
+    height: 80px; /* Tamanho da foto */
+    border-radius: 50%; /* Foto redonda */
+    margin-right: 20px; /* Espaçamento entre a foto e o texto */
+}
+
+header .logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 3.5rem; /* Tamanho do logo */
+    color: #f7eaee; /* Cor do logo */
+}
+
+/* Navegação */
+header nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinha os itens horizontalmente */
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li:first-child {
+    margin-left: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fdfdfd; /* Cor do texto */
+    transition: color 0.3s ease;
+    font-size: 1.2rem; /* Tamanho da fonte */
+}
+
+header nav ul li a:hover {
+    color: #ffd700; /* Cor do hover */
+}
+
+/* Estilos responsivos para dispositivos menores */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        height: auto; /* Ajusta a altura para caber o conteúdo */
+        text-align: center; /* Centraliza o texto em dispositivos menores */
+    }
+
+    .logo-with-photo {
+        margin-bottom: 10px; /* Reduz o espaçamento abaixo do logo */
+    }
+
+    header .logo {
+        font-size: 2.5rem; /* Reduz o tamanho do logo */
+    }
+
+    header nav {
+        position: static; /* Remove a posição fixa */
+        margin-top: 20px; /* Espaçamento superior */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Alinha itens verticalmente */
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px; /* Espaçamento inferior */
+    }
+
+    header nav ul li a {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+    }
+}
+
+/* Estilos adicionais para dispositivos muito pequenos */
+@media (max-width: 480px) {
+    .logo-with-photo img {
+        width: 60px; /* Reduz o tamanho da foto */
+        height: 60px; /* Reduz o tamanho da foto */
+        margin-right: 15px; /* Reduz o espaçamento */
+    }
+
+    header .logo {
+        font-size: 1.5rem; /* Reduz o tamanho do logo */
+    }
+
+    header nav ul li a {
+        font-size: 0.85rem; /* Reduz o tamanho da fonte */
+    }
+}
+
+/* Estilos para a seção de login */
+#login {
+    position: relative; /* Muda a posição para relativa */
+    max-width: 500px; /* Largura máxima do formulário */
+    width: 90%; /* Largura do formulário ajustada para 90% da tela */
+    padding: 30px; /* Espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    z-index: 10; /* Garante que o formulário de login fique acima dos outros elementos */
+    overflow: auto; /* Remove qualquer overflow inesperado */
+    margin: auto; /* Centraliza horizontalmente o formulário */
+    margin-top: 10%; /* Margem superior para distanciar do topo */
+}
+
+/* Ajusta o tamanho do título */
+#login h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem; /* Tamanho do título */
+    color: #e91e63; /* Cor rosa */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Ajusta o estilo das labels */
+#login form label {
+    display: block; /* Faz com que as labels se comportem como blocos */
+    margin-bottom: 10px; /* Espaçamento inferior entre as labels */
+    color: #333; /* Cor do texto */
+}
+
+/* Ajusta o estilo dos campos de entrada */
+#login form input[type="text"],
+#login form input[type="password"] {
+    width: 100%; /* Largura total do input */
+    padding: 15px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaçamento inferior entre os inputs */
+    border: 1px solid #ccc; /* Borda fina cinza */
+    border-radius: 5px; /* Borda arredondada */
+    font-size: 1rem; /* Tamanho da fonte dos inputs */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+/* Ajusta o estilo do botão */
+#login form button {
+    width: 100%; /* Largura total do botão */
+    padding: 15px; /* Espaçamento interno */
+    background-color: #e91e63; /* Cor de fundo rosa */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de ponteiro ao passar por cima */
+    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+/* Efeito hover no botão */
+#login form button:hover {
+    background-color: #ffd700; /* Cor de fundo dourado ao passar por cima */
+}
+
+/* Estilos responsivos para dispositivos menores */
+@media (max-width: 768px) {
+    #login {
+        padding: 20px; /* Reduz o padding em telas menores */
+        max-width: 90%; /* Ajusta a largura máxima do formulário */
+    }
+
+    #login h2 {
+        font-size: 1.8rem; /* Reduz o tamanho da fonte do título */
+    }
+
+    #login form input[type="text"],
+    #login form input[type="password"] {
+        padding: 12px; /* Reduz o padding dos campos de entrada */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte dos inputs */
+    }
+
+    #login form button {
+        padding: 12px; /* Reduz o padding do botão */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte do botão */
+    }
+}
+
+/* Estilos adicionais para dispositivos muito pequenos */
+@media (max-width: 480px) {
+    #login {
+        padding: 15px; /* Reduz ainda mais o padding em telas muito pequenas */
+    }
+
+    #login h2 {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
+    }
+
+    #login form input[type="text"],
+    #login form input[type="password"] {
+        padding: 10px; /* Reduz o padding dos campos de entrada */
+        font-size: 0.8rem; /* Reduz o tamanho da fonte dos inputs */
+    }
+
+    #login form button {
+        padding: 10px; /* Reduz o padding do botão */
+        font-size: 0.8rem; /* Reduz o tamanho da fonte do botão */
+    }
+}
+
+/* Estilos para o rodapé */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px; /* Padding ajustado para garantir que o texto não fique encostado nas bordas */
+    margin-top: auto; /* Garante que o rodapé fique na parte inferior da tela */
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.endereco, .redes-sociais, .mapa {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+}
+
+.endereco h3, .redes-sociais h3, .mapa h3 {
+    color: #e91e63;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.endereco p {
+    margin-bottom: 10px;
+}
+
+.redes-sociais ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.redes-sociais ul li {
+    margin-bottom: 10px;
+}
+
+.redes-sociais a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    color: #2f00ff;
+}
+
+.mapa img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.direitos {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+#vlibras-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

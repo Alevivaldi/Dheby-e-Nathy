@@ -1,0 +1,264 @@
+/* Reset básico e estilos globais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tenor Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-image: url('/img/ç.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+    text-align: left;
+    height: auto; /* Ajuste para permitir o redimensionamento automático */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Mudança para coluna em telas menores */
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+}
+
+/* Ajusta o logo e foto */
+.logo-with-photo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo-with-photo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+header .logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem;
+    color: #f7eaee;
+}
+
+/* Ajusta a navegação para telas menores */
+header nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fdfdfd;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+}
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        height: auto;
+        text-align: center;
+    }
+
+    header .logo {
+        font-size: 1.75rem;
+    }
+
+    header nav {
+        margin-top: 15px;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 414px) {
+    header .logo-with-photo img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.85rem;
+    }
+
+}
+
+
+/* Estilos para o painel */
+.panel-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #e91e63;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.panel-container h1 {
+    font-family: 'Archivo Black', sans-serif;
+    color: #e91e63;
+}
+
+.purchase-details,
+.order-details {
+    margin-bottom: 30px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h3 {
+    margin: 0;
+    color: #e91e63;
+}
+
+.product-info p {
+    margin: 5px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e91e63;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #c2185b;
+}
+
+.action-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-button {
+    background-color: #9e9e9e;
+}
+
+.contact-button {
+    background-color: #4caf50;
+}
+
+.back-button:hover {
+    background-color: #757575;
+}
+
+.contact-button:hover {
+    background-color: #388e3c;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #333;
+    color: #fdfdfd;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.endereco,
+.redes-sociais,
+.mapa {
+    flex: 1;
+    margin: 10px;
+}
+
+.redes-sociais ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.redes-sociais ul li {
+    margin-bottom: 10px;
+}
+
+.redes-sociais a {
+    color: #fdfdfd;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.redes-sociais a:hover {
+    color: #ffd700;
+}
+
+.map {
+    margin-top: 20px;
+}
+
+.map iframe {
+    border: 0;
+}
+
+.direitos {
+    margin-top: 20px;
+    font-size: 0.8rem;
+}

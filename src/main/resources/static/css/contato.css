@@ -1,0 +1,847 @@
+/* Reset básico e estilos globais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tenor Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-image: url('/img/ç.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+    text-align: left;
+    height: auto; /* Ajuste para permitir o redimensionamento automático */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Mudança para coluna em telas menores */
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+}
+
+/* Ajusta o logo e foto */
+.logo-with-photo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo-with-photo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+header .logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem;
+    color: #f7eaee;
+}
+
+/* Ajusta a navegação para telas menores */
+header nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fdfdfd;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+}
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        height: auto;
+        text-align: center;
+    }
+
+    header .logo {
+        font-size: 1.75rem;
+    }
+
+    header nav {
+        margin-top: 15px;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 414px) {
+    header .logo-with-photo img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.85rem;
+    }
+
+}
+
+
+
+
+
+/* Estilos para a seção de produtos */
+#produtos {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+#produtos h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem;
+    color: #e91e63;
+    margin-bottom: 30px;
+}
+
+.produtos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.produto {
+    width: 300px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.produto h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.produto p {
+    color: #666;
+}
+
+/* Estilos para a seção de texto */
+#text {
+    display: flex;
+    padding: 50px;
+    background-color: #ee8fc38c;
+    flex-wrap: wrap;
+}
+
+#text .image {
+    flex: 1;
+    background-image: url('/assets/img/18.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 200px; /* Ajuste mínimo para a imagem */
+}
+
+#text .text {
+    flex: 1;
+    padding: 0 50px;
+}
+
+#text h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    color: #e91e63;
+}
+
+#text h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Estilos para a seção de login */
+#login {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#login h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2.5rem;
+    color: #e91e63;
+    margin-bottom: 20px;
+}
+
+#login form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#login form input[type="text"],
+#login form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#login form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login form button:hover {
+    background-color: #ffd700;
+}
+
+/* Estilos para a seção de destaques */
+#destaques {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+.destaque-item {
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.destaque-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.destaque-item .texto {
+    margin-top: 20px;
+}
+
+.destaque-item h3 {
+    font-size: 1.5rem;
+    color: #a71747;
+    margin-bottom: 10px;
+}
+
+.destaque-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Estilos para a galeria de imagens */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--sec);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-item label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-align: center;
+    color: var(--sec);
+    font-size: 18px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid-item:hover label {
+    opacity: 1;
+}
+
+.grid-item label span {
+    background-color: var(--ter);
+    color: var(--sec);
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.8;
+}
+
+
+/* Estilos para a seção de contato */
+#contato {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+#contato h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem;
+    color: #e91e63;
+    margin-bottom: 30px;
+}
+
+#contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contato form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#contato form input,
+#contato form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contato form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contato form button:hover {
+    background-color: #d81b60; /* Cor um pouco mais escura ao passar o mouse */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #contato {
+        padding: 40px 15px;
+    }
+
+    #contato h2 {
+        font-size: 1.75rem;
+    }
+
+    #contato form {
+        padding: 15px;
+    }
+
+    #contato form input,
+    #contato form textarea {
+        padding: 8px;
+    }
+
+    #contato form button {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #contato {
+        padding: 30px 10px;
+    }
+
+    #contato h2 {
+        font-size: 1.5rem;
+    }
+
+    #contato form {
+        padding: 10px;
+    }
+
+    #contato form input,
+    #contato form textarea {
+        padding: 6px;
+    }
+
+    #contato form button {
+        padding: 8px;
+    }
+}
+
+
+
+
+
+
+/* Estilos para o rodapé */
+footer {
+    display: flex;
+    flex-direction: column; /* Alinha os itens em coluna em dispositivos menores */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center; /* Centraliza o texto */
+    gap: 20px; /* Espaço entre os elementos */
+}
+
+/* Estilos para a seção esquerda do rodapé */
+footer .footer-left {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Estilos para a seção direita do rodapé */
+footer .footer-right {
+    width: 100%;
+    max-width: 800px; /* Limita a largura para não ficar muito largo em telas grandes */
+    height: auto; /* Ajusta a altura conforme o conteúdo */
+    background-color: #fff;
+    border-radius: 8px; /* Aumenta o arredondamento para um visual mais suave */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra mais suave */
+    color: #333; /* Cor do texto dentro da seção direita */
+}
+
+/* Estilo para os links e ícones sociais */
+footer .social-links {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 15px; /* Espaço entre os itens */
+}
+
+footer .social-links a {
+    color: #ffd700; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    font-size: 1.5rem; /* Tamanho dos ícones ou texto */
+    transition: color 0.3s ease; /* Transição suave para a cor dos links */
+}
+
+footer .social-links a:hover {
+    color: #fff; /* Cor dos links ao passar o mouse */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+
+    footer .footer-left {
+        font-size: 0.9rem;
+    }
+
+    footer .footer-right {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    footer .social-links a {
+        font-size: 1.25rem; /* Ajusta o tamanho dos ícones em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px;
+    }
+
+    footer .footer-left {
+        font-size: 0.8rem;
+    }
+
+    footer .footer-right {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    footer .social-links a {
+        font-size: 1rem; /* Ajusta o tamanho dos ícones em telas menores */
+    }
+}
+
+  
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    header .logo {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .produtos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 90%;
+    }
+
+    #text {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #text .image,
+    #text .text {
+        width: 100%;
+        padding: 0;
+    }
+
+    #destaques {
+        flex-direction: column;
+    }
+
+    .destaque-item {
+        width: 90%;
+    }
+
+   
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+    }
+
+    .produto h3 {
+        font-size: 1.2rem;
+    }
+
+    #text h1 {
+        font-size: 2rem;
+    }
+
+    #text h2 {
+        font-size: 1.5rem;
+    }
+
+    #text p {
+        font-size: 0.9rem;
+    }
+
+    #login h2 {
+        font-size: 2rem;
+    }
+
+    #login form {
+        padding: 10px;
+    }
+
+    #login form input[type="text"],
+    #login form input[type="password"] {
+        padding: 10px;
+    }
+
+    #login form button {
+        padding: 10px;
+    }
+
+    .destaque-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .destaque-item p {
+        font-size: 0.9rem;
+    }
+
+  
+}
+/* Estilos para a seção de depoimentos */
+#testemunhos {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center; /* Centraliza o texto */
+}
+
+#testemunhos h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.testemunho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid  #F5A6B1;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px; /* Limita a largura dos depoimentos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+    text-align: center; /* Centraliza o texto dentro de cada depoimento */
+}
+
+.testemunho img {
+    width: 80px; /* Ajusta o tamanho da imagem */
+    height: 80px;
+    border-radius: 50%; /* Faz a imagem ficar circular */
+    object-fit: cover; /* Garante que a imagem não fique distorcida */
+    margin-bottom: 15px;
+}
+
+.testemunho p {
+    font-size: 1rem;
+    color:  #F5A6B1;
+    margin-bottom: 10px;
+}
+
+.testemunho cite {
+    font-size: 0.875rem;
+    color: #F5A6B1;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    #testemunhos h2 {
+        font-size: 1.75rem;
+    }
+
+    .testemunho {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .testemunho img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .testemunho p {
+        font-size: 0.9rem;
+    }
+
+    .testemunho cite {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #testemunhos h2 {
+        font-size: 1.5rem;
+    }
+
+    .testemunho {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .testemunho img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .testemunho p {
+        font-size: 0.85rem;
+    }
+
+    .testemunho cite {
+        font-size: 0.75rem;
+    }
+}
+
+
+/* Estilos para a seção de serviços */
+#servicos {
+    padding: 40px;
+    background-color: #F5A6B1; /* Cor de fundo rosa pastel */
+    text-align: center; /* Centraliza o texto */
+}
+
+#servicos h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333; /* Cor do texto */
+}
+
+.servico {
+    background-color: #FFF; /* Cor de fundo branco para cada serviço */
+    border: 1px solid #E1B8B0; /* Borda rosa clara */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 300px; /* Limita a largura dos serviços */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servico i {
+    font-size: 3rem; /* Tamanho dos ícones */
+    color: #F5D18C; /* Cor dos ícones dourado suave */
+    margin-bottom: 15px;
+}
+
+.servico h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333; /* Cor do título */
+}
+
+.servico p {
+    font-size: 1rem;
+    color: #555; /* Cor do texto do serviço */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    #servicos {
+        padding: 30px;
+    }
+
+    #servicos h2 {
+        font-size: 1.75rem;
+    }
+
+    .servico {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .servico i {
+        font-size: 2.5rem;
+    }
+
+    .servico h3 {
+        font-size: 1.25rem;
+    }
+
+    .servico p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #servicos {
+        padding: 20px;
+    }
+
+    #servicos h2 {
+        font-size: 1.5rem;
+    }
+
+    .servico {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .servico i {
+        font-size: 2rem;
+    }
+
+    .servico h3 {
+        font-size: 1rem;
+    }
+
+    .servico p {
+        font-size: 0.85rem;
+    }
+}

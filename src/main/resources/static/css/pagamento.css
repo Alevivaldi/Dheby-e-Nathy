@@ -1,0 +1,270 @@
+/* Reset básico e estilos globais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tenor Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-image: url('/img/ç.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+    text-align: left;
+    height: auto; /* Ajuste para permitir o redimensionamento automático */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Mudança para coluna em telas menores */
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+}
+
+/* Ajusta o logo e foto */
+.logo-with-photo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo-with-photo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+header .logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem;
+    color: #f7eaee;
+}
+
+/* Ajusta a navegação para telas menores */
+header nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fdfdfd;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+}
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        height: auto;
+        text-align: center;
+    }
+
+    header .logo {
+        font-size: 1.75rem;
+    }
+
+    header nav {
+        margin-top: 15px;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 414px) {
+    header .logo-with-photo img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.85rem;
+    }
+
+}
+/* Container principal do sucesso do pagamento */
+.payment-success-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.payment-message h1 {
+    color: #4caf50;
+}
+
+.order-summary {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.order-summary img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.order-summary .order-info {
+    max-width: 600px;
+}
+
+.contact-instructions {
+    margin-top: 20px;
+}
+
+.contact-instructions p {
+    margin: 10px 0;
+}
+
+.contact-instructions a {
+    color: #e91e63;
+    text-decoration: none;
+}
+
+.contact-instructions a:hover {
+    text-decoration: underline;
+}
+
+.action-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e91e63;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #d81b60;
+}
+
+.back-button {
+    background-color: #4caf50;
+}
+
+.back-button:hover {
+    background-color: #388e3c;
+}
+
+
+.direitos {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #fff;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.endereco, .redes-sociais, .mapa {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.endereco h3, .redes-sociais h3, .mapa h3 {
+    margin-top: 0;
+}
+
+/* Redes sociais */
+.redes-sociais ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.redes-sociais ul li {
+    margin-bottom: 5px;
+}
+
+.redes-sociais ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.redes-sociais ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Mapa */
+.mapa iframe {
+    width: 100%;
+    border: 0;
+}
+
+/* Direitos autorais */
+.direitos {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+}
+/* Estilos responsivos para o rodapé */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .endereco, .redes-sociais, .mapa {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        padding: 15px;
+    }
+}
+  

@@ -1,0 +1,275 @@
+/* Reset básico e estilos globais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tenor Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-image: url('/img/ç.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+    text-align: left;
+    height: auto; /* Ajuste para permitir o redimensionamento automático */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Mudança para coluna em telas menores */
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+}
+
+/* Ajusta o logo e foto */
+.logo-with-photo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo-with-photo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+header .logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem;
+    color: #f7eaee;
+}
+
+/* Ajusta a navegação para telas menores */
+header nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fdfdfd;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+}
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        height: auto;
+        text-align: center;
+    }
+
+    header .logo {
+        font-size: 1.75rem;
+    }
+
+    header nav {
+        margin-top: 15px;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 414px) {
+    header .logo-with-photo img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.85rem;
+    }
+
+}
+
+.admin-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #f8b1b1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.client-info,
+.order-management,
+.inventory-management {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.client-info p,
+.order-info p,
+.inventory-item p {
+    margin: 5px 0;
+}
+
+.product-img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.order-info {
+    margin-left: 20px;
+}
+
+.order-form,
+.inventory-form {
+    background-color: #fdf2f2;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.order-form label,
+.inventory-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.order-form input,
+.order-form textarea,
+.inventory-form input,
+.inventory-form textarea,
+.order-form select,
+.inventory-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.order-form button,
+.inventory-form button {
+    background-color: #f8b1b1;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.order-form button:hover,
+.inventory-form button:hover {
+    background-color: #f56c6c;
+}
+
+.action-buttons {
+    text-align: center;
+}
+
+.action-buttons .button {
+    background-color: #f8b1b1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+}
+
+.action-buttons .button.back-button {
+    background-color: #d9534f;
+}
+
+.action-buttons .button.contact-button {
+    background-color: #5bc0de;
+}
+
+.action-buttons .button:hover {
+    opacity: 0.9;
+}
+
+.footer-content {
+    background-color: #f8b1b1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-content .endereco,
+.footer-content .redes-sociais,
+.footer-content .mapa {
+    margin-bottom: 20px;
+}
+
+.footer-content .endereco h3,
+.footer-content .redes-sociais h3,
+.footer-content .mapa h3 {
+    margin-top: 0;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-content .mapa iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+.direitos {
+    font-size: 14px;
+    margin-top: 20px;
+}
