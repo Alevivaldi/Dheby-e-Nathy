@@ -17,7 +17,7 @@ public class ProdutoControllers {
     @Autowired
     private ProdutoServices produtoService;
 
-    @GetMapping
+    @GetMapping(value="/listar")
     public List<ProdutoDTO> listarProdutos() {
         return produtoService.buscarTodos();
     }

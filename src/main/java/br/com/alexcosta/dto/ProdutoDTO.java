@@ -14,9 +14,7 @@ public class ProdutoDTO {
     private String descricao;
     private String imagem;
     private Double valor;
-    private Integer quantidade;
-    private String linkCompra;
-    private String linkEncomenda;
+
 
     public ProdutoDTO(Produto dto) {
         this.id = dto.getId();
@@ -24,8 +22,6 @@ public class ProdutoDTO {
         this.descricao = dto.getDescricao();
         this.imagem = dto.getImagem();
         this.valor = dto.getValor();
-        this.quantidade = dto.getQuantidade();
-        this.linkCompra = dto.getLinkCompra();
-        this.linkEncomenda = dto.getLinkEncomenda();
+
     }
 }

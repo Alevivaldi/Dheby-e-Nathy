@@ -1,5 +1,4 @@
 package br.com.alexcosta.controllers;
-
 import br.com.alexcosta.dto.CadastroDTO;
 import br.com.alexcosta.dto.ClienteDTO;
 import br.com.alexcosta.entities.Cliente;
@@ -18,25 +17,13 @@ public class ClienteControllers {
     private ClienteServices clienteServices;
 
     @PostMapping(value="/login")
-    public ResponseEntity<String> login(@RequestBody ClienteDTO dto) {
-        try {
-            boolean isAuthenticated = clienteServices.login(dto.getUsername(), dto.getPassword());
-            if (isAuthenticated) {
-                return ResponseEntity.ok("Login bem-sucedido");
-            } else {
-                return ResponseEntity.status(401).body("Usuário ou senha incorretos");
-            }
-        } catch (IllegalArgumentException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        } catch (RuntimeException e) {
-            return ResponseEntity.status(404).body(e.getMessage());
-        }
+    public boolean login(@RequestBody ClienteDTO dto) {
+        return clienteServices.login(dto.getUsername(), dto.getPassword());
     }
     @PostMapping(value="/cadastro")
     public ResponseEntity<Cliente> cadastrar(@RequestBody CadastroDTO cadastroDTO) {
         Cliente cliente = clienteServices.cadastrar(cadastroDTO);
         return ResponseEntity.ok(cliente);
     }
-
 }
 

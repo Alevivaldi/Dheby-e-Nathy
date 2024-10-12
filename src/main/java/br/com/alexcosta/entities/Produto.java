@@ -23,7 +23,5 @@ public class Produto {
     private String descricao;
     private String imagem;
     private Double valor;
-    private Integer quantidade;
-    private String linkCompra;
-    private String linkEncomenda;
+
 }
